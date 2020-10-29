@@ -65,16 +65,15 @@ AS-IS 조직(Horizontally-Aligned) -> TO-BE 조직(Vertically-Aligned)
 분석/설계 단계에서 도출된 MSA는 총 4개로 다음과 같음
 * 고객페이지(view)는 CQRS를 위한 서비스
 1. 책 상품 관리<br>
-![view_books](https://user-images.githubusercontent.com/73535272/97380457-6af8f500-190a-11eb-88df-3fbe4ef56860.jpg)
-![view_books_1](https://user-images.githubusercontent.com/73535272/97380459-6c2a2200-190a-11eb-9473-5330f69cceae.JPG)
-![view_books_2](https://user-images.githubusercontent.com/73535272/97380460-6cc2b880-190a-11eb-8f56-7c2f32a7b947.JPG)
-![view_books_3](https://user-images.githubusercontent.com/73535272/97380463-6d5b4f00-190a-11eb-9bdf-a36fc2b26106.JPG)
+![view](https://user-images.githubusercontent.com/73535272/97512772-b58f7580-19cd-11eb-83c8-c2de4671681f.jpg)
+![view_books](https://user-images.githubusercontent.com/73535272/97512780-b9bb9300-19cd-11eb-93e7-46b37dd5b711.jpg)
+![view_books_1](https://user-images.githubusercontent.com/73535272/97512784-be804700-19cd-11eb-85f9-42708934d8fe.JPG)
 2. 주문 관리<br>
-![view_rentals](https://user-images.githubusercontent.com/73535272/97380482-7b10d480-190a-11eb-8dea-dec980fe395b.jpg)
+![view_rentals](https://user-images.githubusercontent.com/73535272/97512834-dbb51580-19cd-11eb-85fd-f176323dd87f.jpg)
 3. 배송 관리<br>
-![view_deliveries](https://user-images.githubusercontent.com/73535272/97380496-849a3c80-190a-11eb-8dcc-459be87a874f.jpg)
+![view_deliveries](https://user-images.githubusercontent.com/73535272/97512818-d2c44400-19cd-11eb-994f-f80c212e793d.jpg)
 4. 고객 페이지<br>
-![view](https://user-images.githubusercontent.com/73535272/97380515-8e23a480-190a-11eb-8e9f-b694a42f4f94.jpg)
+![view](https://user-images.githubusercontent.com/73535272/97512772-b58f7580-19cd-11eb-83c8-c2de4671681f.jpg)
 
 ### Request-Response 아키텍쳐 구현
 1. Req-Res 호출<br>

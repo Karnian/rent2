@@ -63,7 +63,7 @@ AS-IS 조직(Horizontally-Aligned) -> TO-BE 조직(Vertically-Aligned)
 ## 구현
 ### DDD의 적용
 분석/설계 단계에서 도출된 MSA는 총 4개로 다음과 같음
-* 고객페이지(view)는 CQRS를 위한 서비스
+
 1. 책 상품 관리<br>
 ![view](https://user-images.githubusercontent.com/73535272/97512772-b58f7580-19cd-11eb-83c8-c2de4671681f.jpg)
 ![view_books](https://user-images.githubusercontent.com/73535272/97512780-b9bb9300-19cd-11eb-93e7-46b37dd5b711.jpg)

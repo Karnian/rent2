@@ -17,6 +17,7 @@
   * Request-Response 아키텍쳐 구현
   * 이벤트 드라이븐 아키텍처 구현
   * Gateway 적용
+  * 폴리글랏 
   * 동기식 호출
   * 비동기식 호출과 Eventual Consistency
 * 운영
@@ -108,6 +109,9 @@ AS-IS 조직(Horizontally-Aligned) -> TO-BE 조직(Vertically-Aligned)
 4. Gateway 직접정보조회<br>
 ![Gateway_직접정보조회](https://user-images.githubusercontent.com/73535272/97379198-975f4200-1907-11eb-96f2-94b3a6e50938.JPG)
 
+### 폴리글랏 퍼시스턴스
+* pom.xml 설정<br>
+![polyglot_](https://user-images.githubusercontent.com/73535272/97516628-df996580-19d6-11eb-8154-5bd7d55ec697.png)
 
 ## 운영
 ### CI/CD설정

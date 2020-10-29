@@ -144,13 +144,13 @@ AS-IS 조직(Horizontally-Aligned) -> TO-BE 조직(Vertically-Aligned)
 ### Readiness
 1. rent 서비스로 seige로 부하를 주고, kubectl apply -f non-readiness.yaml 로 이미지 배포 (po, deploy에 설정된 autoscale 제거 후 실행함)<br>
 #siege -c255 -t120S -r10 --content-type "application/json" 'http://rent:8080/rental POST {"bookId":"5", "qty":1}'<br>
-![Readiness_설정전 seige결과](https://user-images.githubusercontent.com/12227092/97448509-112d1500-1974-11eb-9217-f51688ba6dab.JPG)
+![readiness_1](https://user-images.githubusercontent.com/73535272/97518369-64d24980-19da-11eb-9115-cfe615cd946d.jpg)
 
 약 성공률이 21%로 확인되어, 신규 이미지 배포 중 request가 넘어가지 못하는 것을 확인
 
 2. rent 서비스로 seige로 부하를 주고, kubectl apply -f readiness.yaml 로 이미지 배포 (po, deploy에 설정된 autoscale 제거 후 실행함)<br>
 #siege -c255 -t120S -r10 --content-type "application/json" 'http://rent:8080/rental POST {"bookId":"5", "qty":1}'
-![Readiness_yaml](https://user-images.githubusercontent.com/12227092/97463350-0037d000-1983-11eb-85d8-502a69992bc0.JPG)<br>
+![readiness_2](https://user-images.githubusercontent.com/73535272/97518371-66037680-19da-11eb-9090-446a9996a27c.jpg)<br>
 성공률이 100%로 확인되어, 신규 이미지 배포 중 Request가 모두 처리되는 것을 확인
 
 

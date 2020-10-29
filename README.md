@@ -75,7 +75,8 @@ AS-IS 조직(Horizontally-Aligned) -> TO-BE 조직(Vertically-Aligned)
 3. 배송 관리<br>
 ![view_deliveries](https://user-images.githubusercontent.com/73535272/97512818-d2c44400-19cd-11eb-994f-f80c212e793d.jpg)
 4. 고객 페이지<br>
-![view](https://user-images.githubusercontent.com/73535272/97512772-b58f7580-19cd-11eb-83c8-c2de4671681f.jpg)
+![cqrs_고객페이지](https://user-images.githubusercontent.com/73535272/97519032-d65ec780-19db-11eb-918e-75a017d1d836.JPG)
+
 
 ### Request-Response 아키텍쳐 구현
 1. Req-Res 호출<br>

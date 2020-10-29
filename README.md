@@ -142,14 +142,16 @@ AS-IS 조직(Horizontally-Aligned) -> TO-BE 조직(Vertically-Aligned)
 ![Liveness_ describe로 확인](https://user-images.githubusercontent.com/12227092/97439959-2dc44f80-196a-11eb-8d6b-799142c4521d.JPG)
 
 ### Readiness
-1. rent 서비스로 seige로 부하를 주어 Availablity를 확인 (po, deploy에 설정된 autoscale 제거 후 실행함)
+1. rent 서비스로 seige로 부하를 주고, kubectl apply -f non-readiness.yaml 로 이미지 배포 (po, deploy에 설정된 autoscale 제거 후 실행함)<br>
 #siege -c255 -t120S -r10 --content-type "application/json" 'http://rent:8080/rental POST {"bookId":"5", "qty":1}'<br>
 ![Readiness_설정전 seige결과](https://user-images.githubusercontent.com/12227092/97448509-112d1500-1974-11eb-9217-f51688ba6dab.JPG)
 
-약 성공률이 90%로 확인함
+약 성공률이 21%로 확인되어, 신규 이미지 배포 중 request가 넘어가지 못하는 것을 확인
 
-2. 올라간 rent 서비스에 Readiness 적용된 yaml 적용<br>
-![Readiness_yaml](https://user-images.githubusercontent.com/12227092/97463350-0037d000-1983-11eb-85d8-502a69992bc0.JPG)
+2. rent 서비스로 seige로 부하를 주고, kubectl apply -f readiness.yaml 로 이미지 배포 (po, deploy에 설정된 autoscale 제거 후 실행함)<br>
+#siege -c255 -t120S -r10 --content-type "application/json" 'http://rent:8080/rental POST {"bookId":"5", "qty":1}'
+![Readiness_yaml](https://user-images.githubusercontent.com/12227092/97463350-0037d000-1983-11eb-85d8-502a69992bc0.JPG)<br>
+성공률이 100%로 확인되어, 신규 이미지 배포 중 Request가 모두 처리되는 것을 확인
 
 
 3. rent 서비스로 seige로 부하를 주어 Availablity를 확인
@@ -192,7 +194,7 @@ application.yaml에 아래의 config Map 설정<br>
 java단에 해당 config Map 적용<br>
 ![ConfigMap RentalController](https://user-images.githubusercontent.com/12227092/97437338-a75a3e80-1966-11eb-9101-1feb4ef4958d.JPG)
 
-<br>
-- 단, 운영환경에서의 확인까지는 못 함
+운영환경에서 실행확인<br>
+![ConfigMap 실행 결과](https://user-images.githubusercontent.com/12227092/97437394-be009580-1966-11eb-9f8d-e5a07134a02e.JPG)
 
 
